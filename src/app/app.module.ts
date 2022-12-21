@@ -9,7 +9,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 
+
 import 'hammerjs';
+
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,13 +19,16 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { DishService } from './services/dish.service';
 import { Promotion } from './shared/promotion';
 import { Leader } from './shared/leader';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +38,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,12 +50,16 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule , 
+    MatDialogModule
   ],
   providers: [
     DishService , 
     Leader,
     Promotion
+  ],
+  entryComponents:[
+    LoginComponent
   ],
 
   bootstrap: [AppComponent]
